@@ -1,0 +1,450 @@
+.cycle-phases {
+  padding: 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+}
+
+.phases-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.phases-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.phases-header p {
+  font-size: 1.2rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Phase Navigation */
+.phase-navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.phase-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.phase-nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.phase-nav-btn.active {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.phase-emoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.phase-nav-text {
+  flex: 1;
+}
+
+.phase-nav-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.phase-nav-duration {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Phase Content */
+.phase-content {
+  margin-bottom: 50px;
+}
+
+.phase-header {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-left: 6px solid;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.phase-title {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.phase-emoji-large {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
+
+.phase-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.phase-duration {
+  font-size: 1.1rem;
+  color: #f8b4d9;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.phase-description {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Phase Details Grid */
+.phase-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.detail-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  transition: all 0.3s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.detail-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hormone Info */
+.hormone-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hormone-item {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 12px;
+  border-left: 4px solid #f8b4d9;
+}
+
+.hormone-description {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* Changes List */
+.changes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.changes-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(248, 180, 217, 0.1);
+  color: #4a5568;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 20px;
+}
+
+.changes-list li:before {
+  content: '•';
+  color: #f8b4d9;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.changes-list li:last-child {
+  border-bottom: none;
+}
+
+/* Diet Card */
+.diet-card {
+  grid-column: span 2;
+}
+
+.diet-section {
+  margin-bottom: 24px;
+}
+
+.diet-section:last-child {
+  margin-bottom: 0;
+}
+
+.diet-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.diet-title.eat {
+  color: #38a169;
+}
+
+.diet-title.avoid {
+  color: #e53e3e;
+}
+
+.diet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.diet-list li {
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #4a5568;
+  border-left: 3px solid #f8b4d9;
+}
+
+/* Exercise List */
+.exercise-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.exercise-tag {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f8b4d9 0%, #d1a7dd 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Yoga Card */
+.yoga-poses {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.yoga-pose {
+  padding: 20px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.yoga-pose h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.yoga-pose p {
+  color: #4a5568;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.yoga-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #f8b4d9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.yoga-link:hover {
+  color: #d1a7dd;
+  transform: translateX(2px);
+}
+
+/* Self-Care Card */
+.self-care-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.self-care-tip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 12px;
+  border-left: 4px solid #f8b4d9;
+}
+
+.tip-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Educational Note */
+.educational-note {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  text-align: center;
+}
+
+.educational-note h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.educational-note p {
+  color: #4a5568;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .phase-navigation {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .phase-nav-btn {
+    padding: 16px;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .phase-emoji {
+    font-size: 1.5rem;
+  }
+  
+  .phase-title {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .phase-emoji-large {
+    font-size: 3rem;
+  }
+  
+  .phase-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .phase-details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .diet-card {
+    grid-column: span 1;
+  }
+  
+  .diet-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-card {
+    padding: 20px;
+  }
+  
+  .phase-header {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .phases-header h1 {
+    font-size: 2rem;
+  }
+  
+  .phases-header p {
+    font-size: 1rem;
+  }
+  
+  .phase-navigation {
+    grid-template-columns: 1fr;
+  }
+  
+  .phase-nav-btn {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .phase-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .phase-duration {
+    font-size: 1rem;
+  }
+  
+  .phase-description {
+    font-size: 1rem;
+  }
+  
+  .detail-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .exercise-list {
+    flex-direction: column;
+  }
+  
+  .exercise-tag {
+    text-align: center;
+  }
+}

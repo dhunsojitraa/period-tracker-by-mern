@@ -1,0 +1,813 @@
+.menopause-page {
+  padding: 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+}
+
+.menopause-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.menopause-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.menopause-header p {
+  font-size: 1.1rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Section Navigation */
+.section-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.nav-btn {
+  padding: 12px 20px;
+  border: 2px solid #f8b4d9;
+  border-radius: 25px;
+  background: white;
+  color: #f8b4d9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.nav-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(248, 180, 217, 0.3);
+}
+
+.nav-btn.active {
+  background: #f8b4d9;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(248, 180, 217, 0.4);
+}
+
+/* Section Content */
+.section-content {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.content-panel h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.content-panel h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.content-panel h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.content-panel p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.content-panel ul {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.content-panel li {
+  margin-bottom: 8px;
+}
+
+/* Overview Section */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.overview-visual {
+  text-align: center;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.menopause-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  color: #f8b4d9;
+}
+
+.overview-visual h4 {
+  margin-bottom: 12px;
+  color: #2d3748;
+}
+
+.stages-overview {
+  margin-top: 40px;
+}
+
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.stage-card {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stage-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stage-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.stage-card h4 {
+  margin-bottom: 12px;
+  color: #2d3748;
+}
+
+.stage-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Symptoms Categories */
+.symptoms-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.symptom-category {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.symptom-category h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.symptoms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.symptom-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  border-left: 4px solid #f8b4d9;
+}
+
+.symptom-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.symptom-item h4 {
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.symptom-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Management Tips */
+.management-tips {
+  margin-top: 40px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.tip-card {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.tip-card h4 {
+  margin-bottom: 12px;
+  color: #2d3748;
+}
+
+.tip-card ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.tip-card li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+/* Hormones Section */
+.hormones-overview {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hormones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.hormone-card {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.hormone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.hormone-header h3 {
+  margin: 0;
+  color: #2d3748;
+}
+
+.hormone-trend {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.hormone-trend.declining {
+  background: rgba(229, 62, 62, 0.2);
+  color: #e53e3e;
+}
+
+.hormone-effects h4 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.hormone-effects ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.hormone-effects li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+/* Hormone Support */
+.hormone-support {
+  margin-top: 40px;
+}
+
+.support-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.support-category {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.support-category h4 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #2d3748;
+}
+
+/* Nutrition Section */
+.nutrition-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nutrition-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.nutrition-card {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.nutrition-card h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.foods-to-eat {
+  border-left: 4px solid #38a169;
+}
+
+.foods-to-limit {
+  border-left: 4px solid #e53e3e;
+}
+
+.food-groups,
+.limit-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.food-group,
+.limit-group {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.food-group h4,
+.limit-group h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.food-group p,
+.limit-group p {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.food-group ul,
+.limit-group ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.food-group li,
+.limit-group li {
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+/* Supplements */
+.supplements-section {
+  margin-top: 40px;
+}
+
+.supplements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.supplement-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid #f8b4d9;
+}
+
+.supplement-card h4 {
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+.supplement-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.supplement-note {
+  background: rgba(229, 62, 62, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  border-left: 4px solid #e53e3e;
+}
+
+.supplement-note p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Exercise Section */
+.exercise-benefits {
+  margin-bottom: 40px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 12px;
+  border-left: 4px solid #f8b4d9;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.benefit-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.exercise-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.exercise-category {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.exercise-category h3 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #2d3748;
+}
+
+.exercise-details p {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.exercise-examples h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.exercise-examples ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.exercise-examples li {
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+}
+
+/* Yoga Section */
+.yoga-section {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.yoga-poses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.yoga-pose {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border-left: 4px solid #f8b4d9;
+}
+
+.yoga-pose h4 {
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+.yoga-pose p {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.yoga-link {
+  color: #f8b4d9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.yoga-link:hover {
+  color: #d1a7dd;
+}
+
+/* Support Section */
+.emotional-overview {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.emotional-challenges {
+  margin-bottom: 40px;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.challenge-item {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.challenge-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.challenge-item h4 {
+  margin-bottom: 8px;
+  color: #2d3748;
+}
+
+.challenge-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Coping Strategies */
+.coping-strategies {
+  margin-bottom: 40px;
+}
+
+.strategies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.strategy-card {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.strategy-card h4 {
+  margin-bottom: 12px;
+  color: #2d3748;
+}
+
+.strategy-card ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.strategy-card li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+/* Positive Mindset */
+.positive-mindset {
+  margin-bottom: 40px;
+}
+
+.mindset-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.mindset-text {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.positive-aspects {
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(56, 161, 105, 0.2);
+}
+
+.positive-aspects h4 {
+  margin-bottom: 16px;
+  color: #2d3748;
+}
+
+.positive-aspects ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.positive-aspects li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #2d5016;
+}
+
+/* When to Seek Help */
+.when-to-seek-help {
+  background: rgba(229, 62, 62, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  border-left: 6px solid #e53e3e;
+}
+
+.help-indicators {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.indicator-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.indicator-icon {
+  font-size: 1.2rem;
+  color: #e53e3e;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-btn {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .section-content {
+    padding: 30px 20px;
+  }
+  
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .stages-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .symptoms-categories {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .hormones-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .support-methods {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .nutrition-categories {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .exercise-types {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .mindset-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menopause-header h1 {
+    font-size: 2rem;
+  }
+  
+  .content-panel h2 {
+    font-size: 1.5rem;
+  }
+  
+  .nav-btn {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: 10px 16px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .challenges-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .supplements-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .yoga-poses {
+    grid-template-columns: 1fr;
+  }
+}

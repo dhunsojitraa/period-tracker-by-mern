@@ -1,0 +1,440 @@
+.symptom-detail {
+  padding: 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+}
+
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.not-found h1 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.not-found p {
+  color: #718096;
+  margin-bottom: 24px;
+}
+
+/* Header */
+.symptom-header {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-left: 6px solid;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: #f8b4d9;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  color: #d1a7dd;
+  transform: translateX(-2px);
+}
+
+.symptom-title {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.symptom-emoji-large {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
+
+.symptom-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.symptom-description {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Content */
+.symptom-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.content-section {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.content-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content-section p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Action Lists */
+.action-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-list li {
+  padding: 12px 16px;
+  border-radius: 12px;
+  position: relative;
+  padding-left: 40px;
+  line-height: 1.5;
+}
+
+.action-list.positive li {
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+  border-left: 4px solid #38a169;
+  color: #2d5016;
+}
+
+.action-list.positive li:before {
+  content: '✓';
+  position: absolute;
+  left: 16px;
+  color: #38a169;
+  font-weight: bold;
+}
+
+.action-list.negative li {
+  background: linear-gradient(135deg, #fef5f5 0%, #fed7d7 100%);
+  border-left: 4px solid #e53e3e;
+  color: #742a2a;
+}
+
+.action-list.negative li:before {
+  content: '✗';
+  position: absolute;
+  left: 16px;
+  color: #e53e3e;
+  font-weight: bold;
+}
+
+/* Diet Grid */
+.diet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.diet-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 12px;
+  border-left: 4px solid #f8b4d9;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.diet-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Exercise Grid */
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.exercise-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+  border-radius: 12px;
+  border-left: 4px solid #38a169;
+  color: #2d5016;
+  font-size: 0.95rem;
+}
+
+.exercise-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Yoga Grid */
+.yoga-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.yoga-card {
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.yoga-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.yoga-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.yoga-card p {
+  color: #4a5568;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.yoga-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #f8b4d9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.yoga-link:hover {
+  color: #d1a7dd;
+  transform: translateX(2px);
+}
+
+/* Tips Grid */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.tip-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 12px;
+  border-left: 4px solid #f8b4d9;
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.tip-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Medical Advice Section */
+.medical-advice-section {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #e53e3e;
+  margin-bottom: 40px;
+}
+
+.medical-advice-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.medical-warning {
+  background: linear-gradient(135deg, #fef5f5 0%, #fed7d7 100%);
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid #e53e3e;
+}
+
+.medical-warning p {
+  color: #742a2a;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.medical-warning ul {
+  color: #742a2a;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.medical-warning li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Related Section */
+.related-section {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.related-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.related-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-emoji {
+  font-size: 2rem;
+}
+
+.related-name {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .symptom-title {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .symptom-emoji-large {
+    font-size: 3rem;
+  }
+  
+  .symptom-title h1 {
+    font-size: 2rem;
+  }
+  
+  .symptom-description {
+    font-size: 1rem;
+  }
+  
+  .content-section {
+    padding: 20px;
+  }
+  
+  .diet-grid,
+  .exercise-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .yoga-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .symptom-header {
+    padding: 20px;
+  }
+  
+  .symptom-title h1 {
+    font-size: 1.8rem;
+  }
+  
+  .content-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .medical-advice-section,
+  .related-section {
+    padding: 20px;
+  }
+  
+  .action-list li {
+    padding: 10px 12px;
+    padding-left: 32px;
+  }
+  
+  .action-list li:before {
+    left: 12px;
+  }
+}

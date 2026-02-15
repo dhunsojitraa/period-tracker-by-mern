@@ -1,0 +1,408 @@
+.mood-tracker {
+  padding: 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+}
+
+.mood-tracker-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.tracker-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tracker-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.tracker-header p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.mood-form-section {
+  grid-row: span 2;
+}
+
+/* Mood Selection */
+.mood-selection {
+  margin-bottom: 30px;
+}
+
+.mood-grid-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.mood-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  border: 2px solid;
+  border-radius: 16px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.mood-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mood-button.selected {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mood-emoji {
+  font-size: 2rem;
+}
+
+.mood-name {
+  text-transform: capitalize;
+}
+
+/* Intensity Section */
+.intensity-section {
+  margin-bottom: 30px;
+}
+
+.intensity-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #e2e8f0;
+  outline: none;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.intensity-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f8b4d9;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intensity-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f8b4d9;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.intensity-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 8px;
+}
+
+/* Triggers Section */
+.triggers-section {
+  margin-bottom: 30px;
+}
+
+.common-triggers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 16px;
+}
+
+.trigger-tag {
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: white;
+  color: #4a5568;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trigger-tag:hover {
+  border-color: #f8b4d9;
+  background: rgba(248, 180, 217, 0.1);
+}
+
+.trigger-tag.selected {
+  background: #f8b4d9;
+  color: white;
+  border-color: #f8b4d9;
+}
+
+.custom-trigger {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.custom-trigger .input {
+  flex: 1;
+}
+
+.selected-triggers {
+  margin-top: 16px;
+}
+
+.selected-triggers p {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+
+.trigger-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: rgba(248, 180, 217, 0.2);
+  color: #4a5568;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.remove-trigger {
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.remove-trigger:hover {
+  background: rgba(229, 62, 62, 0.2);
+  color: #e53e3e;
+}
+
+/* Chart Section */
+.chart-container {
+  padding: 20px 0;
+  height: 300px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+  color: #718096;
+}
+
+/* Statistics Section */
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.stat-mood {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-emoji {
+  font-size: 1.5rem;
+}
+
+.stat-name {
+  font-weight: 500;
+  color: #2d3748;
+  text-transform: capitalize;
+}
+
+.stat-details {
+  text-align: right;
+}
+
+.stat-count {
+  font-weight: 600;
+  color: #f8b4d9;
+  font-size: 0.9rem;
+}
+
+.stat-avg {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+/* Recent Moods Section */
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recent-item {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.recent-date {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 6px;
+}
+
+.recent-mood {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.recent-emoji {
+  font-size: 1.2rem;
+}
+
+.recent-name {
+  font-weight: 500;
+  color: #2d3748;
+  text-transform: capitalize;
+  flex: 1;
+}
+
+.recent-intensity {
+  font-size: 0.85rem;
+  color: #f8b4d9;
+  font-weight: 600;
+}
+
+.recent-notes {
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mood-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .mood-form-section {
+    grid-row: span 1;
+  }
+  
+  .mood-grid-selector {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .mood-button {
+    padding: 12px 8px;
+  }
+  
+  .mood-emoji {
+    font-size: 1.5rem;
+  }
+  
+  .common-triggers {
+    gap: 6px;
+  }
+  
+  .trigger-tag {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  
+  .custom-trigger {
+    flex-direction: column;
+  }
+  
+  .chart-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tracker-header h1 {
+    font-size: 2rem;
+  }
+  
+  .mood-grid-selector {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .mood-button {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 12px 16px;
+  }
+  
+  .mood-emoji {
+    font-size: 1.5rem;
+  }
+  
+  .intensity-labels {
+    font-size: 0.7rem;
+  }
+  
+  .stat-item,
+  .recent-item {
+    padding: 10px 12px;
+  }
+  
+  .chart-container {
+    height: 200px;
+    padding: 10px 0;
+  }
+}

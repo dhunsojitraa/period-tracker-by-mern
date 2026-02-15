@@ -1,0 +1,424 @@
+.music-therapy {
+  padding: 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+}
+
+.music-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.music-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.music-header p {
+  font-size: 1.1rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Mood Selector */
+.mood-selector {
+  margin-bottom: 50px;
+}
+
+.mood-selector h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 30px;
+}
+
+.mood-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mood-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 2px solid;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.mood-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mood-btn.active {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mood-emoji {
+  font-size: 1.5rem;
+}
+
+.mood-name {
+  font-size: 1rem;
+}
+
+/* Current Mood Section */
+.current-mood-section {
+  margin-bottom: 60px;
+}
+
+.mood-header {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-left: 6px solid;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.mood-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mood-emoji-large {
+  font-size: 3rem;
+}
+
+.mood-title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.mood-title p {
+  color: #4a5568;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Playlists */
+.playlists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.playlist-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  transition: all 0.3s ease;
+}
+
+.playlist-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.playlist-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.duration {
+  background: rgba(248, 180, 217, 0.2);
+  color: #4a5568;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.playlist-description {
+  color: #718096;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.playlist-links {
+  display: flex;
+  gap: 12px;
+}
+
+.platform-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+}
+
+.platform-link.youtube {
+  background: #ff0000;
+  color: white;
+}
+
+.platform-link.youtube:hover {
+  background: #cc0000;
+  transform: translateY(-1px);
+}
+
+.platform-link.spotify {
+  background: #1db954;
+  color: white;
+}
+
+.platform-link.spotify:hover {
+  background: #1ed760;
+  transform: translateY(-1px);
+}
+
+.platform-icon {
+  font-size: 1.2rem;
+}
+
+/* Benefits Section */
+.benefits-section {
+  margin-bottom: 60px;
+}
+
+.benefits-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 40px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.benefit-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.benefit-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.benefit-card p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Tips Section */
+.tips-section {
+  margin-bottom: 60px;
+}
+
+.tips-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 40px;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tip-item {
+  display: flex;
+  gap: 20px;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.tip-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #f8b4d9 0%, #d1a7dd 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.tip-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.tip-content p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+}
+
+.cta-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+}
+
+.cta-card p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mood-buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .mood-btn {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .mood-title {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .mood-emoji-large {
+    font-size: 2.5rem;
+  }
+  
+  .playlists-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .playlist-links {
+    flex-direction: column;
+  }
+  
+  .tip-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-header h1 {
+    font-size: 2rem;
+  }
+  
+  .mood-selector h2 {
+    font-size: 1.5rem;
+  }
+  
+  .mood-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .mood-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .benefits-section h2,
+  .tips-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-card h2 {
+    font-size: 1.5rem;
+  }
+}

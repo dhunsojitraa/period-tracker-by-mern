@@ -1,0 +1,350 @@
+.dashboard {
+  padding: 40px 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+}
+
+.dashboard-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.loading-spinner {
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #f8b4d9;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.welcome-section p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(248, 180, 217, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.card-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.phase-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Cycle Overview Card */
+.cycle-overview {
+  grid-column: span 2;
+}
+
+.cycle-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.stat {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f8b4d9;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: #718096;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.phase-description {
+  background: rgba(248, 180, 217, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.phase-description p {
+  color: #4a5568;
+  margin: 0;
+  font-weight: 500;
+}
+
+.cycle-actions {
+  text-align: center;
+}
+
+.no-cycle-data {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.no-cycle-data p {
+  color: #718096;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Mood Card */
+.mood-display {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+}
+
+.mood-emoji {
+  font-size: 4rem;
+  flex-shrink: 0;
+}
+
+.mood-info h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.mood-info p {
+  color: #718096;
+  margin-bottom: 4px;
+}
+
+.mood-notes {
+  font-style: italic;
+  color: #4a5568 !important;
+  margin-top: 8px !important;
+}
+
+.no-mood-data {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.no-mood-data p {
+  color: #718096;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Quick Links Card */
+.links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.quick-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(248, 180, 217, 0.2);
+}
+
+.quick-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(248, 180, 217, 0.3);
+}
+
+.link-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.link-text h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.link-text p {
+  font-size: 0.8rem;
+  color: #718096;
+  margin: 0;
+}
+
+/* Wellness Tips Card */
+.tip-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, #fef7ff 0%, #f8f4ff 100%);
+  border-radius: 16px;
+}
+
+.tip-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.tip-text h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.tip-text p {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+  
+  .quick-actions {
+    justify-content: center;
+  }
+  
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+  
+  .cycle-overview {
+    grid-column: span 1;
+  }
+  
+  .cycle-stats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mood-display {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .tip-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 20px 0;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 30px;
+  }
+  
+  .welcome-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .dashboard-card {
+    padding: 20px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .mood-emoji {
+    font-size: 3rem;
+  }
+  
+  .tip-icon {
+    font-size: 2rem;
+  }
+}
