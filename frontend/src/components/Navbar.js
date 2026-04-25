@@ -31,7 +31,6 @@ const Navbar = () => {
             A Girl's Best Friend
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="navbar-menu desktop-menu">
             {isAuthenticated ? (
               <>
@@ -77,6 +76,12 @@ const Navbar = () => {
                 >
                   Analytics
                 </Link>
+                <Link 
+                  to="/sex-education" 
+                  className={`nav-link ${isActive('/sex-education') ? 'active' : ''}`}
+                >
+                  Sex Ed
+                </Link>
                 <div className="user-menu">
                   <NotificationBell />
                   <span className="user-greeting">Hi, {user?.name}!</span>
@@ -116,7 +121,7 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Mobile Menu Button */}
+          
           <button 
             className="mobile-menu-btn"
             onClick={toggleMenu}
@@ -128,7 +133,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="mobile-menu">
             {isAuthenticated ? (

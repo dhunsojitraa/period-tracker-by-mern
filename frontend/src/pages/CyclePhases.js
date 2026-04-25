@@ -313,7 +313,6 @@ const CyclePhases = () => {
           <p>Learn about the four phases of your cycle and how to support your body through each one</p>
         </div>
 
-        {/* Phase Navigation */}
         <div className="phase-navigation">
           {Object.entries(phases).map(([key, phase]) => (
             <button
@@ -335,7 +334,6 @@ const CyclePhases = () => {
           ))}
         </div>
 
-        {/* Phase Content */}
         <div className="phase-content">
           <div className="phase-header" style={{ borderColor: currentPhase.color }}>
             <div className="phase-title">
@@ -349,7 +347,6 @@ const CyclePhases = () => {
           </div>
 
           <div className="phase-details-grid">
-            {/* Hormonal Changes */}
             <div className="detail-card">
               <h3>Hormonal Changes</h3>
               <div className="hormone-info">
@@ -363,7 +360,6 @@ const CyclePhases = () => {
               </div>
             </div>
 
-            {/* Physical Changes */}
             <div className="detail-card">
               <h3>Physical Changes</h3>
               <ul className="changes-list">
@@ -373,7 +369,6 @@ const CyclePhases = () => {
               </ul>
             </div>
 
-            {/* Emotional Changes */}
             <div className="detail-card">
               <h3>Emotional Changes</h3>
               <ul className="changes-list">
@@ -383,7 +378,7 @@ const CyclePhases = () => {
               </ul>
             </div>
 
-            {/* Diet Recommendations */}
+            
             <div className="detail-card diet-card">
               <h3>Nutrition Guide</h3>
               <div className="diet-section">
@@ -404,7 +399,7 @@ const CyclePhases = () => {
               </div>
             </div>
 
-            {/* Exercise Recommendations */}
+            
             <div className="detail-card">
               <h3>Recommended Exercises</h3>
               <div className="exercise-list">
@@ -414,7 +409,7 @@ const CyclePhases = () => {
               </div>
             </div>
 
-            {/* Yoga Poses */}
+
             <div className="detail-card yoga-card">
               <h3>Yoga Poses for This Phase</h3>
               <div className="yoga-poses">
@@ -435,7 +430,7 @@ const CyclePhases = () => {
               </div>
             </div>
 
-            {/* Self-Care Tips */}
+            
             <div className="detail-card self-care-card">
               <h3>Self-Care Tips</h3>
               <div className="self-care-tips">
@@ -450,7 +445,6 @@ const CyclePhases = () => {
           </div>
         </div>
 
-        {/* Educational Note */}
         <div className="educational-note">
           <h3>Remember</h3>
           <p>

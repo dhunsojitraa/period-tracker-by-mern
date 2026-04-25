@@ -131,7 +131,6 @@ const MoodTracker = () => {
         toast.success('Mood logged successfully!');
       }
       
-      // Refresh data
       fetchTodayMood();
       fetchMoodHistory();
     } catch (error) {
@@ -225,7 +224,7 @@ const MoodTracker = () => {
         </div>
 
         <div className="mood-grid">
-          {/* Mood Logging Form */}
+          
           <div className="mood-form-section">
             <div className="card">
               <h3>
@@ -233,7 +232,7 @@ const MoodTracker = () => {
               </h3>
               
               <form onSubmit={handleSubmit}>
-                {/* Mood Selection */}
+                
                 <div className="mood-selection">
                   <label className="form-label">Select your mood:</label>
                   <div className="mood-grid-selector">
@@ -255,7 +254,7 @@ const MoodTracker = () => {
                   </div>
                 </div>
 
-                {/* Intensity Slider */}
+                
                 {selectedMood && (
                   <div className="intensity-section">
                     <label className="form-label">
@@ -280,7 +279,7 @@ const MoodTracker = () => {
                   </div>
                 )}
 
-                {/* Triggers Section */}
+                
                 <div className="triggers-section">
                   <label className="form-label">What might have influenced your mood?</label>
                   
@@ -340,7 +339,7 @@ const MoodTracker = () => {
                   )}
                 </div>
 
-                {/* Notes */}
+                
                 <div className="form-group">
                   <label className="form-label">Notes (Optional)</label>
                   <textarea
@@ -359,7 +358,7 @@ const MoodTracker = () => {
             </div>
           </div>
 
-          {/* Mood Chart */}
+          
           <div className="mood-chart-section">
             <div className="card">
               <h3>Mood Trends</h3>
@@ -375,7 +374,7 @@ const MoodTracker = () => {
             </div>
           </div>
 
-          {/* Mood Statistics */}
+          
           <div className="mood-stats-section">
             <div className="card">
               <h3>Mood Statistics (Last 30 Days)</h3>
@@ -402,7 +401,7 @@ const MoodTracker = () => {
             </div>
           </div>
 
-          {/* Recent Moods */}
+          
           <div className="recent-moods-section">
             <div className="card">
               <h3>Recent Moods</h3>

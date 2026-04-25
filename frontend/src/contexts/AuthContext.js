@@ -45,7 +45,6 @@ export const AuthProvider = ({ children }) => {
         twoFactorToken 
       });
       
-      // Check if 2FA is required
       if (response.data.requires2FA) {
         return { 
           requires2FA: true, 

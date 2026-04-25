@@ -71,13 +71,13 @@ const Analytics = () => {
         {
           data: counts,
           backgroundColor: [
-            '#FFB6C1', // Light Pink
-            '#DDA0DD', // Plum
-            '#98FB98', // Pale Green
-            '#87CEEB', // Sky Blue
-            '#F0E68C', // Khaki
-            '#FFA07A', // Light Salmon
-            '#D3D3D3', // Light Gray
+            '#FFB6C1',
+            '#DDA0DD',
+            '#98FB98',
+            '#87CEEB',
+            '#F0E68C',
+            '#FFA07A',
+            '#D3D3D3',
           ],
           borderWidth: 2,
           borderColor: '#fff',
@@ -158,7 +158,6 @@ const Analytics = () => {
         <p>Insights from your tracking journey</p>
       </div>
 
-      {/* Tab Navigation */}
       <div className="analytics-tabs">
         <button 
           className={`tab ${activeTab === 'overview' ? 'active' : ''}`}
@@ -180,10 +179,8 @@ const Analytics = () => {
         </button>
       </div>
 
-      {/* Overview Tab */}
       {activeTab === 'overview' && (
         <div className="tab-content">
-          {/* Key Stats */}
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-icon">📅</div>
@@ -215,7 +212,7 @@ const Analytics = () => {
             </div>
           </div>
 
-          {/* Insights */}
+          
           {insights.length > 0 && (
             <div className="insights-section">
               <h2>💡 Personal Insights</h2>
@@ -232,7 +229,6 @@ const Analytics = () => {
         </div>
       )}
 
-      {/* Cycle Analysis Tab */}
       {activeTab === 'cycle' && (
         <div className="tab-content">
           <div className="charts-grid">
@@ -299,7 +295,6 @@ const Analytics = () => {
         </div>
       )}
 
-      {/* Mood Patterns Tab */}
       {activeTab === 'mood' && (
         <div className="tab-content">
           <div className="charts-grid">

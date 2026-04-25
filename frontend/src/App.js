@@ -18,7 +18,9 @@ import MusicTherapy from './pages/MusicTherapy';
 import Profile from './pages/Profile';
 import Analytics from './pages/Analytics';
 import TwoFactorSetup from './pages/TwoFactorSetup';
+import SexEducation from './pages/SexEducation';
 import ProtectedRoute from './components/ProtectedRoute';
+import ChatBot from './components/ChatBot';
 
 function App() {
   return (
@@ -67,6 +69,7 @@ function App() {
                   <TwoFactorSetup />
                 </ProtectedRoute>
               } />
+              <Route path="/sex-education" element={<SexEducation />} />
             </Routes>
           </main>
           <Toaster 
@@ -82,6 +85,7 @@ function App() {
               }
             }}
           />
+          <ChatBot />
         </div>
       </Router>
     </AuthProvider>

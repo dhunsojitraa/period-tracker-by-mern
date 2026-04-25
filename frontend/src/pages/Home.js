@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Hero Section */}
+      
       <section className="hero">
         <div className="container">
           <div className="hero-content">
@@ -40,17 +40,14 @@ const Home = () => {
             </div>
             <div className="hero-image">
               <div className="hero-illustration">
-                <div className="floating-element element-1">🌸</div>
-                <div className="floating-element element-2">💕</div>
-                <div className="floating-element element-3">🌙</div>
-                <div className="floating-element element-4">✨</div>
+                
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      
       <section className="features">
         <div className="container">
           <h2 className="section-title">Everything You Need for Wellness</h2>
@@ -89,7 +86,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      
       <section className="why-choose-us">
         <div className="container">
           <div className="why-content">
@@ -139,7 +136,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      
       <section className="cta">
         <div className="container">
           <div className="cta-content">

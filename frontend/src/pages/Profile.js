@@ -41,7 +41,6 @@ const Profile = () => {
         lastPeriodDate: user.lastPeriodDate ? user.lastPeriodDate.split('T')[0] : ''
       });
 
-      // Fetch 2FA status
       fetch2FAStatus();
     }
   }, [user]);
@@ -137,7 +136,7 @@ const Profile = () => {
         </div>
 
         <div className="profile-content">
-          {/* Tab Navigation */}
+          
           <div className="tab-navigation">
             <button
               className={`tab-btn ${activeTab === 'profile' ? 'active' : ''}`}
@@ -162,9 +161,9 @@ const Profile = () => {
             </button>
           </div>
 
-          {/* Tab Content */}
+          
           <div className="tab-content">
-            {/* Profile Tab */}
+            
             {activeTab === 'profile' && (
               <div className="tab-panel">
                 <div className="panel-header">
@@ -222,7 +221,7 @@ const Profile = () => {
               </div>
             )}
 
-            {/* Cycle Settings Tab */}
+            
             {activeTab === 'cycle' && (
               <div className="tab-panel">
                 <div className="panel-header">
@@ -305,7 +304,7 @@ const Profile = () => {
               </div>
             )}
 
-            {/* Privacy & Security Tab */}
+            
             {activeTab === 'privacy' && (
               <div className="tab-panel">
                 <div className="panel-header">

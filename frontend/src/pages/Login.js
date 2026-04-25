@@ -35,7 +35,6 @@ const Login = () => {
       const result = await login(formData.email, formData.password);
       
       if (result.requires2FA) {
-        // Show 2FA modal
         setTempUserId(result.userId);
         setShow2FA(true);
         setLoading(false);

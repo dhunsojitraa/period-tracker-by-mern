@@ -13,7 +13,6 @@ const NotificationBell = () => {
   useEffect(() => {
     if (isAuthenticated) {
       fetchUnreadCount();
-      // Fetch unread count every 5 minutes
       const interval = setInterval(fetchUnreadCount, 5 * 60 * 1000);
       return () => clearInterval(interval);
     }
@@ -44,7 +43,6 @@ const NotificationBell = () => {
     try {
       await api.patch(`/notifications/${notificationId}/read`);
       
-      // Update local state
       setNotifications(prev => 
         prev.map(notif => 
           notif._id === notificationId 
@@ -53,7 +51,6 @@ const NotificationBell = () => {
         )
       );
       
-      // Update unread count
       setUnreadCount(prev => Math.max(0, prev - 1));
     } catch (error) {
       console.error('Error marking notification as read:', error);
@@ -64,7 +61,6 @@ const NotificationBell = () => {
     try {
       await api.patch('/notifications/mark-all-read');
       
-      // Update local state
       setNotifications(prev => 
         prev.map(notif => ({ ...notif, isRead: true }))
       );
@@ -206,7 +202,6 @@ const NotificationBell = () => {
                   className="view-all-btn"
                   onClick={() => {
                     setIsOpen(false);
-                    // Could navigate to a full notifications page
                   }}
                 >
                   View all notifications

@@ -191,7 +191,7 @@ const MusicTherapy = () => {
           <p>Discover curated playlists designed to support your emotional wellness journey</p>
         </div>
 
-        {/* Mood Selection */}
+        
         <div className="mood-selector">
           <h2>Choose Your Mood</h2>
           <div className="mood-buttons">
@@ -213,7 +213,7 @@ const MusicTherapy = () => {
           </div>
         </div>
 
-        {/* Current Mood Display */}
+        
         <div className="current-mood-section">
           <div className="mood-header" style={{ borderColor: currentMood.color }}>
             <div className="mood-title">
@@ -225,7 +225,7 @@ const MusicTherapy = () => {
             </div>
           </div>
 
-          {/* Playlists */}
+          
           <div className="playlists-grid">
             {currentMood.playlists.map((playlist, index) => (
               <div key={index} className="playlist-card">
@@ -262,7 +262,7 @@ const MusicTherapy = () => {
           </div>
         </div>
 
-        {/* Music Benefits Section */}
+        
         <div className="benefits-section">
           <h2>Benefits of Music Therapy</h2>
           <div className="benefits-grid">
@@ -304,7 +304,7 @@ const MusicTherapy = () => {
           </div>
         </div>
 
-        {/* Tips Section */}
+        
         <div className="tips-section">
           <h2>Tips for Music Therapy</h2>
           <div className="tips-list">
@@ -358,7 +358,7 @@ const MusicTherapy = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
+        
         <div className="cta-section">
           <div className="cta-card">
             <h2>Start Your Musical Wellness Journey</h2>

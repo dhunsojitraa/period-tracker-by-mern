@@ -1,61 +1,39 @@
-# 🔐 Two-Factor Authentication (2FA) - Setup Guide
+# Two-Factor Authentication (2FA) - Setup Guide
 
-## ✅ Implementation Complete!
+## Overview
 
-Your app now has a complete Two-Factor Authentication system using TOTP (Time-based One-Time Password).
+The application implements TOTP-based Two-Factor Authentication using the Speakeasy library. This adds a second layer of security beyond the password.
 
----
+## How It Works
 
-## 🎯 What Was Implemented:
+After enabling 2FA, users must enter a 6-digit time-based code from an authenticator app every time they log in. The code changes every 30 seconds and is generated using the TOTP (Time-based One-Time Password) algorithm.
 
-### **Backend (Node.js + Express)**
-- ✅ 2FA secret generation using Speakeasy
-- ✅ QR code generation for authenticator apps
-- ✅ TOTP token verification
-- ✅ Backup codes (10 codes per user)
-- ✅ 2FA enable/disable functionality
-- ✅ Modified login flow to support 2FA
-- ✅ User model updated with 2FA fields
+## Enabling 2FA
 
-### **Frontend (React)**
-- ✅ 2FA setup wizard with 3 steps
-- ✅ QR code display for scanning
-- ✅ 2FA verification modal during login
-- ✅ 2FA settings in Profile page
-- ✅ Enable/disable 2FA functionality
-- ✅ Backup codes display and download
+1. Log in to your account
+2. Go to Profile and select the Privacy & Security tab
+3. Click "Enable 2FA"
+4. Scan the QR code with an authenticator app
+5. Enter the 6-digit code shown in the app to verify
+6. Save the backup codes in a secure location
+7. 2FA is now active on your account
 
----
+## Logging In With 2FA
 
-## 🚀 How to Use:
+1. Enter your email and password as usual
+2. A verification modal will appear
+3. Open your authenticator app and enter the current 6-digit code
+4. If you do not have access to your phone, use one of your backup codes
+5. You will be logged in successfully
 
-### **For Users:**
+## Disabling 2FA
 
-**1. Enable 2FA:**
-- Login to your account
-- Go to Profile → Privacy & Security tab
-- Click "Enable 2FA"
-- Scan QR code with Google Authenticator or Authy
-- Enter 6-digit code to verify
-- Save backup codes in a safe place
-- Done! 2FA is now enabled
+1. Go to Profile and select the Privacy & Security tab
+2. Click "Disable 2FA"
+3. Enter your password to confirm
+4. 2FA will be removed from your account
 
-**2. Login with 2FA:**
-- Enter email and password as usual
-- If 2FA is enabled, a modal will appear
-- Enter the 6-digit code from your authenticator app
-- Or use a backup code if you lost your device
-- Successfully logged in!
-
-**3. Disable 2FA:**
-- Go to Profile → Privacy & Security tab
-- Click "Disable 2FA"
-- Enter your password to confirm
-- 2FA is now disabled
-
----
-
-## 📱 Compatible Authenticator Apps:
+## Compatible Authenticator Apps
 
 - Google Authenticator (iOS/Android)
 - Microsoft Authenticator (iOS/Android)
@@ -64,133 +42,43 @@ Your app now has a complete Two-Factor Authentication system using TOTP (Time-ba
 - LastPass Authenticator
 - Any TOTP-compatible app
 
----
+## Technical Details
 
-## 🔧 Technical Details:
-
-### **Algorithm:**
-- TOTP (Time-based One-Time Password)
+### Algorithm
+- TOTP (Time-based One-Time Password) per RFC 6238
 - 30-second time window
 - 6-digit codes
 - SHA-1 hashing
 
-### **Security Features:**
-- Secrets stored encrypted in database
-- Backup codes are one-time use
+### Security
+- Secrets stored in the database
+- Backup codes are single-use and removed after use
 - Password required to disable 2FA
-- Time window of ±2 steps for clock skew
+- Time window tolerance of plus or minus 2 steps for clock skew
 
-### **API Endpoints:**
+### API Endpoints
 ```
-POST /api/2fa/setup          - Generate QR code
-POST /api/2fa/verify         - Verify and enable 2FA
-POST /api/2fa/validate       - Validate during login
-POST /api/2fa/disable        - Disable 2FA
-GET  /api/2fa/status         - Get 2FA status
-```
-
-### **Database Fields Added:**
-```javascript
-twoFactorSecret: String       // Encrypted TOTP secret
-twoFactorEnabled: Boolean     // Is 2FA enabled?
-twoFactorBackupCodes: [String] // Array of backup codes
+POST /api/2fa/setup       - Generate QR code and secret
+POST /api/2fa/verify      - Verify code and enable 2FA
+POST /api/2fa/validate    - Validate code during login
+POST /api/2fa/disable     - Disable 2FA
+GET  /api/2fa/status      - Get current 2FA status
 ```
 
----
+### Database Fields
+```
+twoFactorSecret: String        - TOTP secret key
+twoFactorEnabled: Boolean      - Whether 2FA is active
+twoFactorBackupCodes: [String] - Array of one-time backup codes
+```
 
-## 🎨 UI Components:
+## UI Components
 
-**1. TwoFactorSetup.js**
-- 3-step wizard
-- QR code display
-- Code verification
-- Backup codes display
+- TwoFactorSetup.js: 3-step setup wizard with QR code display and backup codes
+- TwoFactorModal.js: Login verification modal with 6-digit code input
+- Profile.js: 2FA status display with enable/disable controls
 
-**2. TwoFactorModal.js**
-- Login 2FA verification
-- 6-digit code input
-- Error handling
+## Security Score
 
-**3. Profile.js (Updated)**
-- 2FA status display
-- Enable/Disable buttons
-- Backup codes count
-
----
-
-## 🔒 Security Level Achieved:
-
-**Before 2FA: 7/10**
-- Password hashing ✅
-- JWT tokens ✅
-- Input validation ✅
-
-**After 2FA: 9/10** 🎉
-- All above ✅
-- Two-factor authentication ✅
-- Backup codes ✅
-- TOTP standard ✅
-
----
-
-## 📊 Testing the Feature:
-
-1. **Start the app:**
-   ```bash
-   npm run dev
-   ```
-
-2. **Register/Login:**
-   - Go to http://localhost:3000
-   - Login to your account
-
-3. **Enable 2FA:**
-   - Go to Profile → Privacy & Security
-   - Click "Enable 2FA"
-   - Scan QR code with authenticator app
-   - Enter code to verify
-
-4. **Test Login:**
-   - Logout
-   - Login again
-   - You'll see 2FA modal
-   - Enter code from app
-   - Successfully logged in!
-
----
-
-## 🎯 Next Steps (Optional Enhancements):
-
-1. **SMS 2FA** - Send codes via SMS (requires Twilio)
-2. **Email 2FA** - Send codes via email
-3. **Remember Device** - Skip 2FA for trusted devices
-4. **Recovery Email** - Alternative recovery method
-5. **Security Logs** - Track login attempts
-
----
-
-## 📝 Files Created/Modified:
-
-**Backend:**
-- `backend/routes/twoFactor.js` (NEW)
-- `backend/models/User.js` (MODIFIED)
-- `backend/routes/auth.js` (MODIFIED)
-- `backend/server.js` (MODIFIED)
-
-**Frontend:**
-- `frontend/src/components/TwoFactorModal.js` (NEW)
-- `frontend/src/components/TwoFactorModal.css` (NEW)
-- `frontend/src/pages/TwoFactorSetup.js` (NEW)
-- `frontend/src/pages/TwoFactorSetup.css` (NEW)
-- `frontend/src/pages/Login.js` (MODIFIED)
-- `frontend/src/pages/Profile.js` (MODIFIED)
-- `frontend/src/contexts/AuthContext.js` (MODIFIED)
-- `frontend/src/App.js` (MODIFIED)
-
----
-
-## 🎉 Congratulations!
-
-Your app now has enterprise-grade Two-Factor Authentication! This significantly improves security and protects user accounts from unauthorized access.
-
-**Security Score: 9/10** 🔒✨
+Without 2FA: 7/10 (password hashing + JWT)
+With 2FA: 9/10 (adds TOTP verification and backup codes)

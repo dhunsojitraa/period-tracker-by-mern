@@ -100,7 +100,7 @@ const TwoFactorSetup = () => {
           <div className={`step ${step >= 3 ? 'active' : ''}`}>3</div>
         </div>
 
-        {/* Step 1: Scan QR Code */}
+        
         {step === 1 && (
           <div className="setup-content">
             <h2>Step 1: Scan QR Code</h2>
@@ -131,7 +131,7 @@ const TwoFactorSetup = () => {
           </div>
         )}
 
-        {/* Step 2: Verify Code */}
+        
         {step === 2 && (
           <div className="setup-content">
             <h2>Step 2: Verify Code</h2>
@@ -169,7 +169,7 @@ const TwoFactorSetup = () => {
           </div>
         )}
 
-        {/* Step 3: Backup Codes */}
+        
         {step === 3 && (
           <div className="setup-content">
             <h2>Step 3: Save Backup Codes</h2>

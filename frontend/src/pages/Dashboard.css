@@ -348,3 +348,131 @@
     font-size: 2rem;
   }
 }
+
+/* Weekly Digest + Health Score Row */
+.digest-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.health-score-card .score-display {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+.score-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 5px solid #38a169;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.score-number {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 11px;
+  color: #718096;
+}
+
+.score-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.score-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #718096;
+  gap: 12px;
+}
+
+/* Weekly Digest */
+.weekly-digest-card .digest-badge {
+  background: linear-gradient(135deg, #f8b4d9, #b794f6);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.digest-stats {
+  display: flex;
+  gap: 16px;
+  margin: 12px 0;
+}
+
+.digest-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  background: #f8f4ff;
+  border-radius: 10px;
+  padding: 10px 6px;
+}
+
+.digest-stat-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: #805ad5;
+}
+
+.digest-stat-label {
+  font-size: 10px;
+  color: #718096;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.digest-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #fffbf0;
+  border-left: 3px solid #d69e2e;
+  padding: 8px 12px;
+  border-radius: 0 8px 8px 0;
+  margin: 8px 0;
+  font-size: 13px;
+  color: #4a5568;
+}
+
+.digest-next-period {
+  font-size: 13px;
+  color: #718096;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.no-data-text {
+  color: #718096;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px 0;
+}
+
+@media (max-width: 768px) {
+  .digest-row { grid-template-columns: 1fr; }
+}

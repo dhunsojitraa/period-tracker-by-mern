@@ -3,18 +3,10 @@ const router = express.Router();
 const auth = require('../middleware/auth');
 const notificationService = require('../services/notificationService');
 
-// Get user notifications
 router.get('/', auth, async (req, res) => {
   try {
-    const userId = req.user.id;
     const { limit = 20, unreadOnly = false } = req.query;
-    
-    const notifications = await notificationService.getUserNotifications(
-      userId, 
-      parseInt(limit), 
-      unreadOnly === 'true'
-    );
-
+    const notifications = await notificationService.getUserNotifications(req.user.id, parseInt(limit), unreadOnly === 'true');
     res.json({ notifications });
   } catch (error) {
     console.error('Error fetching notifications:', error);
@@ -22,12 +14,9 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
-// Get unread notification count
 router.get('/unread-count', auth, async (req, res) => {
   try {
-    const userId = req.user.id;
-    const count = await notificationService.getUnreadCount(userId);
-    
+    const count = await notificationService.getUnreadCount(req.user.id);
     res.json({ count });
   } catch (error) {
     console.error('Error fetching unread count:', error);
@@ -35,18 +24,10 @@ router.get('/unread-count', auth, async (req, res) => {
   }
 });
 
-// Mark notification as read
 router.patch('/:id/read', auth, async (req, res) => {
   try {
-    const userId = req.user.id;
-    const notificationId = req.params.id;
-    
-    const notification = await notificationService.markAsRead(notificationId, userId);
-    
-    if (!notification) {
-      return res.status(404).json({ message: 'Notification not found' });
-    }
-
+    const notification = await notificationService.markAsRead(req.params.id, req.user.id);
+    if (!notification) return res.status(404).json({ message: 'Notification not found' });
     res.json({ notification });
   } catch (error) {
     console.error('Error marking notification as read:', error);
@@ -54,13 +35,9 @@ router.patch('/:id/read', auth, async (req, res) => {
   }
 });
 
-// Mark all notifications as read
 router.patch('/mark-all-read', auth, async (req, res) => {
   try {
-    const userId = req.user.id;
-    
-    await notificationService.markAllAsRead(userId);
-    
+    await notificationService.markAllAsRead(req.user.id);
     res.json({ message: 'All notifications marked as read' });
   } catch (error) {
     console.error('Error marking all notifications as read:', error);
@@ -68,19 +45,14 @@ router.patch('/mark-all-read', auth, async (req, res) => {
   }
 });
 
-// Create a manual notification (for testing)
 router.post('/test', auth, async (req, res) => {
   try {
-    const userId = req.user.id;
     const { type, title, message } = req.body;
-    
     const notification = await notificationService.createNotification(
-      userId,
-      type || 'reminder',
+      req.user.id, type || 'reminder',
       title || 'Test Notification',
-      message || 'This is a test notification to verify the system is working!'
+      message || 'This is a test notification!'
     );
-
     res.json({ notification });
   } catch (error) {
     console.error('Error creating test notification:', error);

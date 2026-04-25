@@ -137,7 +137,7 @@ const Symptoms = () => {
           ))}
         </div>
 
-        {/* General Tips Section */}
+        
         <div className="general-tips">
           <div className="tips-card">
             <h2>General Wellness Tips</h2>
@@ -181,7 +181,7 @@ const Symptoms = () => {
           </div>
         </div>
 
-        {/* When to See a Doctor */}
+        
         <div className="medical-advice">
           <div className="advice-card">
             <h2>When to Consult a Healthcare Provider</h2>
@@ -229,7 +229,7 @@ const Symptoms = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
+        
         <div className="quick-links-section">
           <h2>Explore More</h2>
           <div className="quick-links-grid">

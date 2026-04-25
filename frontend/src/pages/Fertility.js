@@ -10,7 +10,7 @@ const Fertility = () => {
           <p>Understanding your reproductive health and fertility awareness</p>
         </div>
 
-        {/* What is Fertility Section */}
+        
         <div className="fertility-section">
           <div className="section-card">
             <h2>What is Fertility?</h2>
@@ -34,7 +34,7 @@ const Fertility = () => {
           </div>
         </div>
 
-        {/* Ovulation Education */}
+        
         <div className="fertility-section">
           <div className="section-card">
             <h2>Understanding Ovulation</h2>
@@ -100,7 +100,7 @@ const Fertility = () => {
           </div>
         </div>
 
-        {/* Fertility Signs */}
+        
         <div className="fertility-section">
           <div className="section-card">
             <h2>Fertility Signs to Track</h2>
@@ -168,7 +168,7 @@ const Fertility = () => {
           </div>
         </div>
 
-        {/* Healthy Habits */}
+        
         <div className="fertility-section">
           <div className="section-card">
             <h2>Healthy Habits for Reproductive Health</h2>
@@ -242,7 +242,7 @@ const Fertility = () => {
           </div>
         </div>
 
-        {/* Age and Fertility */}
+        
         <div className="fertility-section">
           <div className="section-card">
             <h2>Age and Fertility</h2>
@@ -279,7 +279,7 @@ const Fertility = () => {
           </div>
         </div>
 
-        {/* When to Seek Help */}
+        
         <div className="fertility-section">
           <div className="section-card medical-advice">
             <h2>When to Consult a Healthcare Provider</h2>
@@ -319,7 +319,7 @@ const Fertility = () => {
           </div>
         </div>
 
-        {/* Educational Resources */}
+        
         <div className="fertility-section">
           <div className="section-card">
             <h2>Continue Learning</h2>

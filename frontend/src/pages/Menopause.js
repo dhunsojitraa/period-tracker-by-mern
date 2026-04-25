@@ -21,7 +21,7 @@ const Menopause = () => {
           <p>Understanding and navigating this natural life transition with confidence</p>
         </div>
 
-        {/* Navigation */}
+        
         <div className="section-navigation">
           {Object.entries(sections).map(([key, title]) => (
             <button
@@ -34,9 +34,9 @@ const Menopause = () => {
           ))}
         </div>
 
-        {/* Content Sections */}
+        
         <div className="section-content">
-          {/* Overview Section */}
+          
           {activeSection === 'overview' && (
             <div className="content-panel">
               <h2>What is Menopause?</h2>
@@ -88,7 +88,7 @@ const Menopause = () => {
             </div>
           )}
 
-          {/* Symptoms Section */}
+          
           {activeSection === 'symptoms' && (
             <div className="content-panel">
               <h2>Symptoms & Stages</h2>
@@ -206,7 +206,7 @@ const Menopause = () => {
             </div>
           )}
 
-          {/* Hormones Section */}
+          
           {activeSection === 'hormones' && (
             <div className="content-panel">
               <h2>Hormonal Changes</h2>
@@ -300,7 +300,7 @@ const Menopause = () => {
             </div>
           )}
 
-          {/* Nutrition Section */}
+          
           {activeSection === 'nutrition' && (
             <div className="content-panel">
               <h2>Nutrition & Diet</h2>
@@ -418,7 +418,7 @@ const Menopause = () => {
             </div>
           )}
 
-          {/* Exercise Section */}
+          
           {activeSection === 'exercise' && (
             <div className="content-panel">
               <h2>Exercise & Wellness</h2>
@@ -537,7 +537,7 @@ const Menopause = () => {
             </div>
           )}
 
-          {/* Support Section */}
+          
           {activeSection === 'support' && (
             <div className="content-panel">
               <h2>Emotional Support & Mental Health</h2>

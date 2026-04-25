@@ -530,3 +530,122 @@
     font-size: 1.5rem;
   }
 }
+
+.cycle-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 6px;
+  background: #f8f4ff;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.note-icon { flex-shrink: 0; }
+
+.note-text {
+  color: #4a5568;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.bayesian-info {
+  margin-top: 16px;
+  background: #f8f4ff;
+  border: 1px solid #e9d8fd;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.bayesian-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.bayesian-badge {
+  background: linear-gradient(135deg, #f8b4d9, #b794f6);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.confidence-score {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.confidence-range {
+  font-size: 12px;
+  color: #4a5568;
+  margin: 4px 0;
+}
+
+.model-note {
+  font-size: 11px;
+  color: #718096;
+  margin: 4px 0 0;
+}
+
+.forecast-section {
+  margin-top: 20px;
+  border-top: 1px solid #e9d8fd;
+  padding-top: 16px;
+}
+
+.forecast-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 12px;
+}
+
+.forecast-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.forecast-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #fdf8ff;
+  border: 1px solid #e9d8fd;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.forecast-cycle {
+  background: linear-gradient(135deg, #f8b4d9, #b794f6);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.forecast-details { flex: 1; }
+
+.forecast-period {
+  font-size: 13px;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.forecast-range {
+  font-size: 11px;
+  color: #718096;
+}
+
+.forecast-ovulation {
+  font-size: 11px;
+  color: #718096;
+}

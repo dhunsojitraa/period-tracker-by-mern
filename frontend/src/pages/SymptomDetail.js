@@ -509,7 +509,7 @@ const SymptomDetail = () => {
   return (
     <div className="symptom-detail">
       <div className="container">
-        {/* Header */}
+        
         <div className="symptom-header" style={{ borderColor: symptom.color }}>
           <Link to="/symptoms" className="back-link">
             ← Back to Symptoms
@@ -523,21 +523,21 @@ const SymptomDetail = () => {
           </div>
         </div>
 
-        {/* Content Grid */}
+        
         <div className="symptom-content">
-          {/* What It Is */}
+          
           <div className="content-section">
             <h2>What It Is</h2>
             <p>{symptom.whatItIs}</p>
           </div>
 
-          {/* Why It Happens */}
+          
           <div className="content-section">
             <h2>Why It Happens</h2>
             <p>{symptom.whyItHappens}</p>
           </div>
 
-          {/* What To Do */}
+          
           <div className="content-section">
             <h2>What You Can Do</h2>
             <ul className="action-list positive">
@@ -547,7 +547,7 @@ const SymptomDetail = () => {
             </ul>
           </div>
 
-          {/* What Not To Do */}
+          
           <div className="content-section">
             <h2>What to Avoid</h2>
             <ul className="action-list negative">
@@ -557,7 +557,7 @@ const SymptomDetail = () => {
             </ul>
           </div>
 
-          {/* Diet Recommendations */}
+          
           <div className="content-section">
             <h2>Helpful Foods</h2>
             <div className="diet-grid">
@@ -570,7 +570,7 @@ const SymptomDetail = () => {
             </div>
           </div>
 
-          {/* Exercises */}
+          
           <div className="content-section">
             <h2>Recommended Exercises</h2>
             <div className="exercise-grid">
@@ -583,7 +583,7 @@ const SymptomDetail = () => {
             </div>
           </div>
 
-          {/* Yoga Poses */}
+          
           <div className="content-section">
             <h2>Yoga Poses</h2>
             <div className="yoga-grid">
@@ -604,7 +604,7 @@ const SymptomDetail = () => {
             </div>
           </div>
 
-          {/* Lifestyle Tips */}
+          
           <div className="content-section">
             <h2>Lifestyle Tips</h2>
             <div className="tips-grid">
@@ -618,7 +618,7 @@ const SymptomDetail = () => {
           </div>
         </div>
 
-        {/* When to See a Doctor */}
+        
         <div className="medical-advice-section">
           <h2>When to Consult a Healthcare Provider</h2>
           <div className="medical-warning">
@@ -635,7 +635,7 @@ const SymptomDetail = () => {
           </div>
         </div>
 
-        {/* Related Symptoms */}
+        
         <div className="related-section">
           <h2>Explore Other Symptoms</h2>
           <div className="related-grid">

@@ -85,7 +85,6 @@ const PeriodTracker = () => {
       await api.post('/cycle/period', formData);
       toast.success('Period logged successfully!');
       
-      // Reset form and refresh data
       setFormData({
         startDate: new Date().toISOString().split('T')[0],
         endDate: '',
@@ -95,7 +94,6 @@ const PeriodTracker = () => {
       });
       setShowLogForm(false);
       
-      // Refresh predictions and history
       fetchPredictions();
       fetchCycleHistory();
     } catch (error) {
@@ -109,7 +107,6 @@ const PeriodTracker = () => {
     
     const classes = [];
     
-    // Check if it's a period day from history
     const isPeriodDay = cycleHistory.some(cycle => {
       const startDate = new Date(cycle.startDate);
       const endDate = cycle.endDate ? new Date(cycle.endDate) : new Date(startDate.getTime() + (5 * 24 * 60 * 60 * 1000));
@@ -120,7 +117,6 @@ const PeriodTracker = () => {
       classes.push('period-day');
     }
     
-    // Check predictions
     if (predictions) {
       const nextPeriod = new Date(predictions.nextPeriod);
       const ovulation = new Date(predictions.ovulationDate);
@@ -216,7 +212,7 @@ const PeriodTracker = () => {
         </div>
 
         <div className="tracker-grid">
-          {/* Calendar Section */}
+          
           <div className="calendar-section">
             <div className="card">
               <h3>Cycle Calendar</h3>
@@ -250,7 +246,7 @@ const PeriodTracker = () => {
             </div>
           </div>
 
-          {/* Predictions Section */}
+          
           <div className="predictions-section">
             {predictions ? (
               <div className="card">
@@ -273,29 +269,66 @@ const PeriodTracker = () => {
                     <div className="prediction-number">{predictions.daysSinceLastPeriod}</div>
                     <div className="prediction-label">Days since last period</div>
                   </div>
-                  
                   <div className="prediction-item">
                     <div className="prediction-number">
                       {Math.max(0, Math.ceil((new Date(predictions.nextPeriod) - new Date()) / (1000 * 60 * 60 * 24)))}
                     </div>
                     <div className="prediction-label">Days until next period</div>
                   </div>
-                  
                   <div className="prediction-item">
-                    <div className="prediction-date">
-                      {new Date(predictions.nextPeriod).toLocaleDateString()}
-                    </div>
+                    <div className="prediction-date">{new Date(predictions.nextPeriod).toLocaleDateString()}</div>
                     <div className="prediction-label">Next period date</div>
                   </div>
-                  
                   <div className="prediction-item">
-                    <div className="prediction-date">
-                      {new Date(predictions.ovulationDate).toLocaleDateString()}
-                    </div>
+                    <div className="prediction-date">{new Date(predictions.ovulationDate).toLocaleDateString()}</div>
                     <div className="prediction-label">Ovulation date</div>
                   </div>
                 </div>
-              </div>
+
+                
+                {predictions.confidenceScore !== undefined && (
+                  <div className="bayesian-info">
+                    <div className="bayesian-header">
+                      <span className="bayesian-badge">🧠 Bayesian Model</span>
+                      <span className="confidence-score" style={{
+                        color: predictions.confidenceScore >= 70 ? '#38a169' : predictions.confidenceScore >= 40 ? '#d69e2e' : '#e53e3e'
+                      }}>
+                        {predictions.confidenceScore}% confidence
+                      </span>
+                    </div>
+                    {predictions.earliestPeriod && (
+                      <p className="confidence-range">
+                        Expected window: {new Date(predictions.earliestPeriod).toLocaleDateString()} — {new Date(predictions.latestPeriod).toLocaleDateString()}
+                      </p>
+                    )}
+                    <p className="model-note">📊 {predictions.modelNote}</p>
+                  </div>
+                )}
+
+                
+                {predictions.sixMonthForecast && predictions.sixMonthForecast.length > 0 && (
+                  <div className="forecast-section">
+                    <h4 className="forecast-title">📅 6-Month Period Forecast</h4>
+                    <div className="forecast-list">
+                      {predictions.sixMonthForecast.map((f) => (
+                        <div key={f.cycleNumber} className="forecast-item">
+                          <div className="forecast-cycle">Cycle {f.cycleNumber}</div>
+                          <div className="forecast-details">
+                            <div className="forecast-period">
+                              🩸 <strong>{new Date(f.periodDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</strong>
+                              <span className="forecast-range"> ({new Date(f.earliestDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} – {new Date(f.latestDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })})</span>
+                            </div>
+                            <div className="forecast-ovulation">
+                              ✨ Ovulation: {new Date(f.ovulationDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                              &nbsp;|&nbsp;
+                              🌱 Fertile: {new Date(f.fertileWindowStart).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} – {new Date(f.fertileWindowEnd).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}              </div>
             ) : (
               <div className="card no-predictions">
                 <h3>No Predictions Yet</h3>
@@ -310,7 +343,7 @@ const PeriodTracker = () => {
             )}
           </div>
 
-          {/* Cycle History */}
+          
           <div className="history-section">
             <div className="card">
               <h3>Recent Cycles</h3>
@@ -335,6 +368,12 @@ const PeriodTracker = () => {
                             ))}
                           </div>
                         )}
+                        {cycle.notes && (
+                          <div className="cycle-note">
+                            <span className="note-icon">📝</span>
+                            <span className="note-text">"{cycle.notes}"</span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -346,7 +385,7 @@ const PeriodTracker = () => {
           </div>
         </div>
 
-        {/* Log Period Modal */}
+        
         {showLogForm && (
           <div className="modal-overlay">
             <div className="modal">

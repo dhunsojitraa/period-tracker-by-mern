@@ -36,16 +36,15 @@ const notificationSchema = new mongoose.Schema({
     type: Date
   },
   actionUrl: {
-    type: String // Optional URL for notification action
+    type: String
   },
   metadata: {
-    type: mongoose.Schema.Types.Mixed // Additional data for the notification
+    type: mongoose.Schema.Types.Mixed
   }
 }, {
   timestamps: true
 });
 
-// Index for efficient queries
 notificationSchema.index({ userId: 1, createdAt: -1 });
 notificationSchema.index({ userId: 1, isRead: 1 });
 notificationSchema.index({ scheduledFor: 1, sentAt: 1 });
